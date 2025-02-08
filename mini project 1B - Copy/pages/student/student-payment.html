@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/student.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <h1>Payment</h1>
+    <form>
+        <label>Choose Payment Method:</label>
+        <select>
+            <option>UPI</option>
+            <option>Card</option>
+            <option>Wallet</option>
+        </select>
+        <button type="submit">Pay Now</button>
+    </form>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- JavaScript -->
+    <script src="../../assets/js/script.js"></script>
+    <script src="../../assets/js/student.js"></script>
+
+    <script>
+        fetch("../../components/header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("../../components/footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+
+</html>

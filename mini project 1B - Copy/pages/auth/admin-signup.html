@@ -1,0 +1,51 @@
+<!-- admin-signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Signup - Canteen</title>
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+
+<body>
+    <div class="signup-container">
+        <div class="signup-box">
+            <h2>Admin Signup</h2>
+            <form id="admin-signup-form">
+                <input type="text" id="admin-username" placeholder="Username" required>
+                <input type="email" id="admin-email" placeholder="Email" required>
+                <input type="password" id="admin-password" placeholder="Password" required>
+                <input type="password" id="admin-confirm-password" placeholder="Confirm Password" required>
+                <button type="submit" id="signup-btn">Sign Up</button>
+            </form>
+            <p class="login-link">Already have an account? <a href="admin-login.html">Login</a></p>
+        </div>
+    </div>
+
+    <script src="../assets/js/admin.js"></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+    </script>
+
+
+</body>
+
+</html>

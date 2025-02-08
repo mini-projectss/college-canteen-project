@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Order Status</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../assets/images/logo.png" alt="Canteen Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="admin-update-order.html">Update Order Status</a></li>
+                <li><a href="admin-order-history.html">Order History</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Update Order Status</h1>
+        <form action="#" method="POST">
+            <label for="order-id">Order ID:</label>
+            <input type="text" id="order-id" name="order-id" required>
+
+            <label for="order-status">Order Status:</label>
+            <select id="order-status" name="order-status">
+                <option value="pending">Pending</option>
+                <option value="in-progress">In Progress</option>
+                <option value="completed">Completed</option>
+            </select>
+
+            <button type="submit">Update Status</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Canteen Management System</p>
+    </footer>
+</body>
+
+</html>

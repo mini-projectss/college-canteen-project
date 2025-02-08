@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/student.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <h1>Menu</h1>
+    <div id="menu">
+        <div class="item">
+            <h3>Pizza</h3>
+            <button onclick="addToCart('Pizza')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <h3>Burger</h3>
+            <button onclick="addToCart('Burger')">Add to Cart</button>
+        </div>
+    </div>
+
+    <a href="student-cart.html">Go to Cart</a>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- JavaScript -->
+    <script src="../../assets/js/script.js"></script>
+    <script src="../../assets/js/student.js"></script>
+
+    <script>
+        fetch("../../components/header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("../../components/footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+
+</html>
